@@ -6,8 +6,7 @@ class App extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {
-      cityList : [{ name: 'Goa', country: 'India' },
+    this.cityList = [{ name: 'Goa', country: 'India' },
     { name: 'Amsterdam', country: 'Netherlands' },
     { name: 'New York', country: 'USA' },
     { name: 'Darjeeling', country: 'India' },
@@ -36,19 +35,16 @@ class App extends Component {
     { name: 'Mount Abu', country: 'India' },
     { name: 'Tirupati', country: 'India' },
     ]
-    }
   }
 
   render() {
-    const renderList = this.state.cityList.filter(data => data.country ==='India').map((city, index) => 
+    const renderList = this.cityList.filter(data => data.country ==='India').map((city, index) => 
       <li key={`location${index}`}>{city.name}</li>
       );
     return (
       <div id="main">
-       {
         <h1>holiday</h1>
         <ol>{renderList}</ol>
-       }
       </div>
     )
   }
