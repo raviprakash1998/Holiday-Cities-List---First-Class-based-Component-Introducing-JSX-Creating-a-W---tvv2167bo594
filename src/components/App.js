@@ -38,9 +38,15 @@ class App extends Component {
   }
 
   render() {
+    const renderList = this.state.cityList.filter(data => data.country ==='India').map((city, index) => 
+      <li key={`location${index}`}>{city.name}</li>
+      );
     return (
       <div id="main">
-        {/* Do not remove the main div */}
+       {
+        <h1>holiday</h1>
+        <ol>{renderList}</ol>
+       }
       </div>
     )
   }
