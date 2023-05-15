@@ -38,7 +38,7 @@ class App extends Component {
   }
 
   render() {
-    const renderList = this.state.cityList.filter(data => data.country ==='India').map((city, index) => 
+    const renderList = this.cityList.filter(data => data.country ==='India').map((city, index) => 
       <li key={`location${index}`}>{city.name}</li>
       );
     return (
